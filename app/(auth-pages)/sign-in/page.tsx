@@ -9,10 +9,12 @@ export default async function Login() {
         <div className="flex flex-row justify-center bg-gradient-to-br from-gray-900 to-gray-800 items-center min-h-screen">
             <div className='min-h-screen gap-[52px] flex-col w-[40%] justify-center items-center flex relative'>
 
-                <div >
+                <div>
 
-                    <Label className='text-xl min-w-[270px] font-semibold bg-gradient-to-r from-teal-400 via-cyan-300 to-sky-400 bg-clip-text text-transparent uppercase tracking-wide inline-block border-b-2 border-teal-400 pb-1'>
-                        evaluation dashboard
+                    <Label
+                        className='text-xl min-w-[270px] font-bold    uppercase tracking-wide inline-block  pb-1'>
+                        evaluation <span
+                        className="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-300 to-sky-400">Dashboard</span>
                     </Label>
                 </div>
                 <div className='w-[320px] sm:w-[400px] p-[2rem] relative flex flex-col'>
