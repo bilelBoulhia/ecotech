@@ -18,7 +18,7 @@ export default  function Login() {
         <div className="flex flex-row justify-center bg-gradient-to-br from-gray-900 to-gray-800 items-center min-h-screen">
 
             <div className='min-h-screen gap-[5px] flex-col w-[40%] justify-center items-center flex relative'>
-                <Image  src={logo} alt='logo' className='w-auto h-[3rem] p-1 absolute top-0 left-0   ' />
+
 
                 <div>
 
