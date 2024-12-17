@@ -5,6 +5,9 @@ import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {IconArrowLeft, IconBrandTabler, IconSettings, IconUserBolt} from "@tabler/icons-react";
 import {useState} from "react";
 import {cn} from "@/utils/cn";
+import {Button} from "@/components/ui/button";
+import {signOutAction} from "@/app/actions";
+import {SubmitButton} from "@/components/submit-button";
 
 
 
@@ -59,6 +62,9 @@ export default function RootLayout({
                 {links.map((link, idx) => (
                     <SidebarLink key={idx} link={link}/>
                 ))}
+                <SubmitButton onClick={signOutAction}>
+                  asd
+                </SubmitButton>
               </div>
             </div>
 

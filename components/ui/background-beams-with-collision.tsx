@@ -225,7 +225,7 @@ const CollisionMechanism = React.forwardRef<
                     repeatDelay: beamOptions.repeatDelay || 0,
                 }}
                 className={cn(
-                    "absolute left-0 top-20  m-auto mx-auto w-[16px] h-[16px] bg-blue-500 shadow-[0_12px_15px_0_rgba(0,0,0,0.44)] rounded-[0%_100%_100%_100%] ",
+                    "absolute left-0 top-20  m-auto mx-auto w-[16px] h-[16px] bg-blue-200 shadow-[0_12px_15px_0_rgba(0,0,0,0.44)] rounded-[0%_100%_100%_100%] ",
                     beamOptions.className
                 )}
             />
@@ -262,13 +262,7 @@ const Explosion = ({...props}: React.HTMLProps<HTMLDivElement>) => {
 
     return (
         <div {...props} className={cn("absolute z-50 h-2 w-2", props.className)}>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                className="absolute -inset-x-10 top-0 m-auto h-2 w-10 rounded-full bg-blue-400 -blur-sm"
-            ></motion.div>
+
             {spans.map((span) => (
                 <motion.span
                     key={span.id}
