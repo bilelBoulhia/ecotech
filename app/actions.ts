@@ -2,7 +2,7 @@
 
 import { encodedRedirect } from "@/utils/utils";
 import { createClient } from "@/utils/supabase/server";
-import { headers } from "next/headers";
+
 import { redirect } from "next/navigation";
 
 
@@ -17,11 +17,12 @@ export const signInAction = async (formData: FormData) => {
     password,
   });
 
+
   if (error) {
     return encodedRedirect("error", "/sign-in", error.message);
   }
 
-  return redirect("/dashboard");
+  return redirect("/main");
 };
 
 
@@ -45,7 +46,7 @@ export const signOutAction = async () => {
 //   if (!password || !confirmPassword) {
 //     encodedRedirect(
 //       "error",
-//       "/dashboard/reset-password",
+//       "/(dashboard)/reset-password",
 //       "Password and confirm password are required",
 //     );
 //   }
@@ -53,7 +54,7 @@ export const signOutAction = async () => {
 //   if (password !== confirmPassword) {
 //     encodedRedirect(
 //       "error",
-//       "/dashboard/reset-password",
+//       "/(dashboard)/reset-password",
 //       "Passwords do not match",
 //     );
 //   }
@@ -65,10 +66,10 @@ export const signOutAction = async () => {
 //   if (error) {
 //     encodedRedirect(
 //       "error",
-//       "/dashboard/reset-password",
+//       "/(dashboard)/reset-password",
 //       "Password update failed",
 //     );
 //   }
 //
-//   encodedRedirect("success", "/dashboard/reset-password", "Password updated");
+//   encodedRedirect("success", "/(dashboard)/reset-password", "Password updated");
 // };
