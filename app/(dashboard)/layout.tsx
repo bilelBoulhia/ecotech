@@ -38,19 +38,13 @@ export default function RootLayout({
           <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
-    {
-      label: "Logout",
-      href: "#",
-      icon: (
-          <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
+
   ];
   const [open, setOpen] = useState(false);
   return (
       <div
           className={cn(
-              "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 max-w-7xl mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+              "rounded-md flex flex-col md:flex-row  bg-gray-100 dark:bg-transparent w-full flex-1  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
               "h-screen"
           )}
       >
@@ -62,9 +56,10 @@ export default function RootLayout({
                 {links.map((link, idx) => (
                     <SidebarLink key={idx} link={link}/>
                 ))}
-                <SubmitButton onClick={signOutAction}>
-                  asd
+                <SubmitButton variant={"ghost"} className='inline group bg-black p-0 m-0 w-0' onClick={signOutAction}>
+                  <IconArrowLeft className="text-neutral-700 inline dark:text-neutral-200  transition-transform duration-300 ease-in-out group-hover:-translate-x-1 h-5 w-5 flex-shrink-0" /> <span className='text-neutral-700 inline   dark:text-neutral-300 p-1'>Logout</span>
                 </SubmitButton>
+
               </div>
             </div>
 
@@ -78,9 +73,9 @@ export default function RootLayout({
 const Dashboard = () => {
   return (
       <div className="flex flex-1">
-        <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:bg-#141C2B bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
+        <div className="p-2 md:p-10 rounded-tl-2xl   bg-gradient-to-bl from-sky-950 to-slate-950 rad flex flex-col gap-2 flex-1 w-full h-full">
           <div className="flex gap-2">
-
+s
           </div>
         </div>
       </div>
