@@ -21,21 +21,21 @@ export default function RootLayout({
       label: "Dashboard",
       href: "#",
       icon: (
-          <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+          <IconBrandTabler className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Profile",
       href: "#",
       icon: (
-          <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+          <IconUserBolt className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Settings",
       href: "#",
       icon: (
-          <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+          <IconSettings className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
       <div
           className={cn(
-              "rounded-md flex flex-col md:flex-row  bg-gray-100 dark:bg-transparent w-full flex-1  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+              "rounded-md flex flex-col md:flex-row  bg-gray-100 bg-transparent w-full flex-1  mx-auto border border-neutral-700 overflow-hidden",
               "h-screen"
           )}
       >
@@ -57,7 +57,7 @@ export default function RootLayout({
                     <SidebarLink key={idx} link={link}/>
                 ))}
                 <SubmitButton variant={"ghost"} className='inline group bg-black p-0 m-0 w-0' onClick={signOutAction}>
-                  <IconArrowLeft className="text-neutral-700 inline dark:text-neutral-200  transition-transform duration-300 ease-in-out group-hover:-translate-x-1 h-5 w-5 flex-shrink-0" /> <span className='text-neutral-700 inline   dark:text-neutral-300 p-1'>Logout</span>
+                  <IconArrowLeft className=" inline text-neutral-200  transition-transform duration-300 ease-in-out group-hover:-translate-x-1 h-5 w-5 flex-shrink-0" /> <span className='text-neutral-300 p-1'>Logout</span>
                 </SubmitButton>
 
               </div>
